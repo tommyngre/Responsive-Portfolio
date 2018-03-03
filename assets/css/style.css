@@ -5,6 +5,11 @@ body{
   height: 100%;
 }
 
+.content{
+  width: 960px;
+  margin: 0 auto;
+}
+
 /* key font styles */
 h1, .header-text{
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -17,6 +22,7 @@ h1, .header-text{
   font-size: 1em; 
 }
 
+/* key header elements */
 header {
   z-index: 2;
   position:fixed;
@@ -25,15 +31,6 @@ header {
   padding: 20px 10px 14px 0px;
   border-bottom: 2px solid #cccccc;
 }
-
-#header-links-wrapper{
-  display:inline;
-}
-
-#small-header{
-  display:none;
-}
-
 .name-header{
   width: 50%;
   background-color:#4aaaa5;
@@ -41,6 +38,14 @@ header {
   padding:15px 15px 13px 15px;
 }
 
+/* header links for large screens*/
+#header-links-wrapper{
+  display:inline;
+}
+a {
+  color:#aaaaaa;
+  text-decoration: none;
+  }  
 .link{
   float:right;
   padding-right:20px;
@@ -53,13 +58,11 @@ header {
   border-right:1px solid #aaaaaa;
   height:20px;
   padding-right:20px;
-
 }
 
-
-a {
-color:#aaaaaa;
-text-decoration: none;
+/* header links for small screens */
+#small-header{
+  display:none;
 }
 
 p {
@@ -68,14 +71,12 @@ p {
   text-align: justify;
 }  
 
-.content{
-  width: 960px;
-  margin: 0 auto;
-}
 /* to apply padding to contained content */
 .section-content-wrapper{
   margin:15px;
 }
+
+/* separates section headers from content */
 .divider-line{
   margin:0 auto;
   min-height:1px;
@@ -85,7 +86,7 @@ p {
 
 .left-content{
   box-sizing:border-box;
-  width: 650px; /* 2px allocated to border */
+  width: 650px;
   background-color: #ffffff;
   float:left;
   padding-bottom:15px;
@@ -96,7 +97,8 @@ p {
 .prof-pic{
   float:left;
   margin:0px 20px 20px 0px;
-  width:100px;
+  width:40%;
+  border:1px solid #dddddd;
 }
 
 /* portfolio page styles */
@@ -106,7 +108,7 @@ p {
 }
 .proj-name{
   position: absolute;
-  margin-top:30px;
+  margin-top:20px;
   color:white;
   background-color:#4aaaa5;
   padding:10px;
@@ -224,6 +226,10 @@ footer {
     width:210px;;
   }
 
+  .proj-name{
+    margin-top:0px;
+  }
+
 }
 
 /* width between 550px and next query */
@@ -240,19 +246,21 @@ footer {
     margin-bottom:30px;
   }
 
-  /* resize projs */
   .proj-pic{
     width:155px;
   }
+
   .proj-name{
     width:135px;;
   }
 
   /* restructure header */
+
   /* hide 550+ header */
   #header-links-wrapper{
     display:none;
   }
+
   /* show 550- header*/
   #small-header{
     position:fixed;
@@ -264,12 +272,15 @@ footer {
     padding:10px;
     width:100%;
   }
+
   .link{
     float:left;
   }
+
   header{
     border-bottom:none;
   }
+  
 }
 
 /* width between 550px and next query */
@@ -290,6 +301,10 @@ footer {
 
   .proj-name{
     width:210px;;
+  }
+
+  .prof-pic{
+    display: none;
   }
 
 }
