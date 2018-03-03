@@ -65,6 +65,7 @@ text-decoration: none;
 p {
   color:gray;
   line-height: 1.5;
+  text-align: justify;
 }  
 
 .content{
@@ -94,7 +95,7 @@ p {
 
 .prof-pic{
   float:left;
-  margin-right:15px;
+  margin:0px 20px 20px 0px;
   width:100px;
 }
 
@@ -176,12 +177,6 @@ textarea {
   opacity:.7;
 }
 
-#toggle{
-  float:right;
-  margin-right:20px;
-  color:#555555;
-}
-
 footer {
   width:100%;
   background-color: #666666;
@@ -193,11 +188,10 @@ footer {
   bottom:0;
 }
 
-/* Width at 600px and below */
-@media screen and (max-width: 800px) {
-
+/* width between 1000px and next query */
+@media screen and (max-width: 1000px) {
   .content{
-    width: 600px;
+    width: 648px;
     margin: 0 auto;
   }
   
@@ -212,21 +206,31 @@ footer {
     margin-top:0px;
   }
 
+}
+
+/* width between 800px and next query */
+@media screen and (max-width: 800px) {
+
+  .content{
+    width: 550px;
+    margin: 0 auto;
+  }
+  
   .proj-pic{
-    width:255px;
+    width:230px;
   }
 
   .proj-name{
-    width:235px;;
+    width:210px;;
   }
 
 }
 
-/* Width at 600px and below */
-@media screen and (max-width: 650px) {
+/* width between 550px and next query */
+@media screen and (max-width: 600px) {
 
   .content{
-    width: 450px;
+    width: 400px;
     margin: 0 auto;
   }
   
@@ -236,41 +240,56 @@ footer {
     margin-bottom:30px;
   }
 
-  .right-content{
-    float:left;
-    width:100%;
-    margin-top:0px;
-  }
-
+  /* resize projs */
   .proj-pic{
-    width:255px;
+    width:155px;
   }
-
   .proj-name{
-    width:235px;;
+    width:135px;;
   }
 
+  /* restructure header */
+  /* hide 550+ header */
   #header-links-wrapper{
     display:none;
   }
-
+  /* show 550- header*/
   #small-header{
     position:fixed;
     top:58px;
     display:inline-block;
     background-color:#ffffff;
     border-bottom: 2px solid #cccccc;
-
+    z-index: 1;
     padding:10px;
     width:100%;
   }
-
   .link{
     float:left;
   }
-
   header{
     border-bottom:none;
+  }
+}
+
+/* width between 550px and next query */
+@media screen and (max-width: 450px) {
+
+  p{
+    text-align:left;
+  }
+  
+  .content{
+    width: 270px;
+    margin: 0 auto;
+  }
+  
+  .proj-pic{
+    width:230px;
+  }
+
+  .proj-name{
+    width:210px;;
   }
 
 }
